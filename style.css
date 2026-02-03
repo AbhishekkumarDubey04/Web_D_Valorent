@@ -1,0 +1,282 @@
+/* --- Valorant Brand Variables --- */
+:root {
+    --val-red: #ff4655;       /* Signature Red */
+    --val-black: #0f1923;     /* Main Dark Background */
+    --val-gray: #1f2326;      /* Secondary Background */
+    --val-white: #ece8e1;     /* Text Color */
+    --val-blue: #00eeff;      /* UI Accents */
+}
+
+/* --- Base Styles --- */
+body {
+    background-color: var(--val-black);
+    color: var(--val-white);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #080d12;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--val-red);
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: var(--val-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--val-red);
+}
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/VALORANT_ART.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    font-family: 'FF Mark W05', sans-serif; /* Valorant-style font */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #ff4655; /* Valorant Signature Red */
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* --- Gallery Section (Side Button Layout) --- */
+.gallery-wrapper {
+    position: relative; /* Container for absolute buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: radial-gradient(circle, #1a252e 0%, #0f1923 100%);
+    padding: 0 10%;
+    border-bottom: 1px solid #333;
+}
+
+.character-card {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.counter {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--val-red);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.img-container {
+    position: relative;
+    height: 550px;
+}
+
+/* Character Glow Effect */
+.img-container::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; height: 300px;
+    background: var(--val-red);
+    filter: blur(120px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+#agentImg {
+    height: 100%;
+    width: auto;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#agentName {
+    font-size: 3rem;
+    margin: 10px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.role-tag {
+    color: var(--val-blue);
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+}
+
+/* Side Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 70, 85, 0.1);
+    color: white;
+    border: 1px solid var(--val-red);
+    padding: 40px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+
+#prevBtn { left: 5%; }
+#nextBtn { right: 5%; }
+
+.nav-btn:hover {
+    background: var(--val-red);
+    box-shadow: 0 0 30px var(--val-red);
+    padding: 40px 30px;
+}
+
+/* --- Video Section --- */
+.video-container {
+    padding: 80px 10%;
+    text-align: center;
+    background: var(--val-black);
+}
+
+.main-video-wrapper {
+    margin-bottom: 30px;
+}
+
+.video-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: var(--val-gray);
+    border: 1px solid transparent;
+    padding: 10px;
+}
+
+.thumb:hover {
+    transform: translateY(-5px);
+    border-color: var(--val-red);
+}
+
+.thumb img {
+    width: 100%;
+    border-bottom: 2px solid var(--val-red);
+}
+
+.thumb span {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: var(--val-white);
+}
+
+/* --- Review Area --- */
+.review-area {
+    padding: 80px 10%;
+    background: var(--val-gray);
+    display: flex;
+    justify-content: center;
+}
+
+.review-box {
+    width: 100%;
+    max-width: 800px;
+    background: var(--val-black);
+    padding: 40px;
+    border-left: 5px solid var(--val-red);
+}
+
+.display-reviews {
+    height: 200px;
+    overflow-y: auto;
+    background: #161b22;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.display-reviews p {
+    border-bottom: 1px solid #222;
+    padding: 10px 0;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    background: #0f1923;
+    color: white;
+    border: 1px solid #444;
+    padding: 15px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    background: var(--val-red);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ff5e6a;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 60px;
+    background: #080d12;
+    color: #555;
+    font-size: 0.8rem;
+    border-top: 1px solid #1a252e;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT | Agents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">VALORANT</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Agents</a></li>
+            <li><a href="#video">Media</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="hero-section">
+        <div class="hero-content">
+            <h1>DEFY THE LIMITS</h1>
+            <p>Dive into the thrilling universe of Valorant, a free-to-play multiplayer first-person shooter game developed and published by Riot Games. Set in a near-future Earth, Valorant pits two teams of five against each other, with players assuming the roles of "agents" who possess unique abilities. Key characters include Phoenix, Sage, Cypher, and Jett, each with their own distinct skills and backstories. Valorant's gameplay is a blend of tactical shooting and strategic use of agent abilities, making for intense, high-stakes matches. The game's primary mode, Bomb Defusal, has one team attempting to plant a bomb while the other tries to stop them, leading to nail-biting showdowns. The Valorant community is a vibrant hub of discussion, fan theories, and artwork. Fans around the world connect to share strategies, discuss updates, and speculate on the lore behind the agents. Whether you're a seasoned player looking to discuss the latest meta, or a newcomer eager to learn the ropes, the Valorant universe is a thrilling place to be.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-wrapper">
+        <button id="prevBtn" class="nav-btn">❮</button>
+        
+        <div class="character-card">
+            <div id="charCounter" class="counter">1 / 10</div>
+            <div class="img-container">
+                <img src="img/jett.png" id="agentImg" alt="Agent">
+            </div>
+            <h2 id="agentName">JETT</h2>
+            <div id="agentRole" class="role-tag">DUELIST</div>
+        </div>
+        
+        <button id="nextBtn" class="nav-btn">❯</button>
+    </section>
+
+    <section id="video" class="video-container">
+        <h2>LATEST GAMEPLAY</h2>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/e_E9W2vsRbQ" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="reviews" class="review-area">
+        <div class="review-box">
+            <h3>AGENT FEEDBACK</h3>
+            <div id="displayReviews" class="display-reviews">
+                <p>"Jett's dash is unbeatable!" - <strong>Player1</strong></p>
+            </div>
+            <div class="input-group">
+                <textarea id="userReview" placeholder="Leave your agent review..."></textarea>
+                <button onclick="addReview()" class="submit-btn">POST REVIEW</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>VALORANT &copy; 2026. CREATED FOR PORTFOLIO PURPOSES.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
